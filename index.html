@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <title>Oceanarium Melaka Web AR</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+  </head>  
+  <body>
+    <h1>Oceanarium Web AR</h1>
+    
+    <p>
+      Web Augmented Reality
+    </p>
+
+    <model-viewer camera-controls touch-action="pan-y" 
+                  autoplay ar ar-modes="webxr scene-viewer" 
+                  scale="0.2 0.2 0.2" 
+                  shadow-intensity="1"
+                  src="assets/asset.glb"
+                  ios-src="assets/asset.usdz"
+                  alt="A 3D model of butterfly">
+    </model-viewer>
+    
+  </body>
+</html>
