@@ -1,36 +1,27 @@
 <!doctype html>
-<html>
-    <title>Oceanarium Melaka Web AR</title>
+<html lang="en">
+  <head>
+    <title>Dewali Oceanarium</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-   <script type="module"
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
- <script nomodule
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
-  </script>
-  </head>  
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
   <body>
-    <h1>Oceanarium Web AR</h1>
-    
-    <p>
-      Web Augmented Reality
-    </p>
-
-    <model-viewer camera-controls touch-action="pan-y" 
-                  autoplay ar ar-modes="webxr scene-viewer" 
-                  ar ar-scale="auto" 
-                  shadow-intensity="0"
-                  src="assets/asset.glb"
-                  ios-src="assets/asset.usdz"
-                  alt="A 3D model dewali elephant">
-    </model-viewer>
-    
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="dewali xrtest.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="0" autoplay>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
   </body>
 </html>
